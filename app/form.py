@@ -2,7 +2,7 @@ from django import forms
 
 from django import forms
 
-class DistanceFrom(forms.Form):
+class DistanceForm(forms.Form):
     lat1 = forms.FloatField(
         label='Latitude 1',
         help_text='Enter the first latitude in decimal degrees.'
