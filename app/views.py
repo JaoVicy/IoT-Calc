@@ -24,4 +24,4 @@ def distance_calculator(request):
             result = f"{distance:.2f} km"
     else:
         form = DistanceForm()
-    return render(request, "distance_form.html", {"form": form, "result": result})
+    return render(request, "index.html", {"form": form, "result": result})
