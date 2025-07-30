@@ -23,6 +23,8 @@ def index(request):
         form = DistanceForm()
     return render(request, "index.html", {"form": form, "result": result})
 
+""""
+# Function to handle distance calculation (future use)
 def distance_calculator(request):
     result = None
     if request.method == "POST":
@@ -39,3 +41,4 @@ def distance_calculator(request):
     else:
         form = DistanceForm()
     return render(request, "distance_form.html", {"form": form, "result": result})
+"""
