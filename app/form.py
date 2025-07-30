@@ -7,8 +7,8 @@ class DistanceForm(forms.Form):
         label='Latitude 1',
         help_text='Enter the first latitude in decimal degrees.'
     )
-    lon2 = forms.FloatField(
-        label='Longitude 2',
+    lon1 = forms.FloatField(
+        label='Longitude 1',
         help_text='Enter the second longitude in decimal degrees.'
     )
     lat2 = forms.FloatField(
