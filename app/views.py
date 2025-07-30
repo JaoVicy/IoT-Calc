@@ -21,7 +21,7 @@ def index(request):
             result = f"{distance:.2f} km"
     else:
         form = DistanceForm()
-    return render(request, "index.html", {"form": form, "result": result})
+    return render(request, "app/index.html", {"form": form, "result": result})
 
 """"
 # Function to handle distance calculation (future use)
