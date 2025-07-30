@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IoT-Calc</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
     <header class="header">
@@ -15,22 +15,15 @@
     <div class="calc-form">
         <div class="calc-form__container">
             <h2>Calculadora de Distância</h2>
-            <form class="calc-form__form" id="distanceForm">
-                <label for="lat1">Latitude 1:</label>
-                    <input type="number" step="any" id="lat1" required>
-                <label for="lon1">Longitude 1:</label>
-                    <input type="number" step="any" id="lon1" required>
-                <label for="lat2">Latitude 2:</label>
-                    <input type="number" step="any" id="lat2" required>
-                <label for="lon2">Longitude 2:</label>
-                    <input type="number" step="any" id="lon2" required>
+            <form class="calc-form__form" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
                 <button type="submit">Calcular</button>
             </form>
         </div>
     </div>
     <div class="result">
-        <span id="result"></span>
+        <span id="result">{% if result %}{{ result }}{% endif %}</span>
     </div>
-    <script src="js/main.js"></script>
 </body>
 </html>
