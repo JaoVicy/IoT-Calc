@@ -8,3 +8,20 @@ from geopy.distance import geodesic
 
 def index(request):
     return render(request, 'app/index.html')
+
+def distance_calculator(request):
+    result = None
+    if request.method == "POST":
+        form = DistanceForm(request.POST)
+        if form.is_valid():
+            lat1 = form.cleaned_data["lat1"]
+            lon1 = form.cleaned_data["lon1"]
+            lat2 = form.cleaned_data["lat2"]
+            lon2 = form.cleaned_data["lon2"]
+            point1 = (lat1, lon1)
+            point2 = (lat2, lon2)
+            distance = geodesic(point1, point2).kilometers
+            result = f"{distance:.2f} km"
+    else:
+        form = DistanceForm()
+    return render(request, "distance_form.html", {"form": form, "result": result})
