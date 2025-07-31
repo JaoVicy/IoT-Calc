@@ -1,9 +1,16 @@
 import gulp from 'gulp';
 import gulpSass from 'gulp-sass';
 import * as dartSass from 'sass';
-import imagemin from 'gulp-imagemin';
 import uglify from 'gulp-uglify';
+import postcss from 'gulp-postcss';
+import cssnano from 'cssnano';
 
+export function styles() {
+    return gulp.src('frontend/src/styles/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(postcss([cssnano()]))
+        .pipe(gulp.dest('./dist/css'));
+}
 const sass = gulpSass(dartSass);
 
 export function scripts() {
@@ -17,11 +24,7 @@ export function html() {
         .pipe(gulp.dest('./dist'));
 }
 
-export function styles() {
-    return gulp.src('frontend/src/styles/*.scss')
-        .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(gulp.dest('./dist/css'));
-}
+
 
 export const build = gulp.parallel(styles, scripts, html);
 
