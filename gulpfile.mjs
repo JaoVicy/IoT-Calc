@@ -11,7 +11,7 @@ export function styles() {
     return gulp.src('frontend/src/styles/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([cssnano()]))
-        .pipe(rename('styles.css'))
+        .pipe(rename('style.css'))
         .pipe(gulp.dest('./dist/css'))
         .pipe(gulp.dest('setup/static/styles'));
 }
