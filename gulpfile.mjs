@@ -4,12 +4,16 @@ import * as dartSass from 'sass';
 import uglify from 'gulp-uglify';
 import postcss from 'gulp-postcss';
 import cssnano from 'cssnano';
+import rename from 'gulp-rename';
+
 
 export function styles() {
     return gulp.src('frontend/src/styles/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([cssnano()]))
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(rename('style.css'))
+        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('setup/static/styles'));
 }
 const sass = gulpSass(dartSass);
 

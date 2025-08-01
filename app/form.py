@@ -5,14 +5,18 @@ from django import forms
 
 class DistanceForm(forms.Form):
     lat1 = forms.FloatField(
-        label="Latitude 1", help_text="Enter the first latitude in decimal degrees."
+        label='Latitude 1',
+        help_text='Coloque a primeira latitude em decimais.'
     )
     lon1 = forms.FloatField(
-        label="Longitude 1", help_text="Enter the second longitude in decimal degrees."
+        label='Longitude 1',
+        help_text='Coloque a primeira longitude em decimais.'
     )
     lat2 = forms.FloatField(
-        label="Latitude 2", help_text="Enter the second latitude in decimal degrees."
+        label='Latitude 2',
+        help_text='Coloque a segunda latitude em decimais.'
     )
     lon2 = forms.FloatField(
-        label="Longitude 2", help_text="Enter the first longitude in decimal degrees."
+        label='Longitude 2',
+        help_text='Coloque a segunda longitude em decimais.'
     )
