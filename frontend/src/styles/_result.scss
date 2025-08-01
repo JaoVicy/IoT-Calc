@@ -6,4 +6,8 @@
     color: variables.$mainTextColor;
     display: flex;
     justify-content: center;
+
+    @media (min-width: 1024){
+        margin-top: -20px;
+    }
 }
