@@ -36,6 +36,10 @@ html, body {
     flex-grow: 1;
 }
 
+.helptext{
+    color: variables.$mainTextColor;
+}
+
 //Tirar o spinscroll
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button {
