@@ -1,0 +1,43 @@
+@use 'variables';
+@use 'header';
+@use 'calc-form';
+@use 'background';
+@use 'footer';
+
+@font-face{
+    font-family: Avenir;
+    src:url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.calc-form,
+.result {
+    flex-grow: 1;
+}
+
+//Tirar o spinscroll
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
