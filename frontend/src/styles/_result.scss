@@ -1,0 +1,17 @@
+@use 'variables';
+
+.result{
+    font-size: 24px;
+    font-weight: bold;
+    color: variables.$mainTextColor;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 1024px){
+        margin-top: -550px;
+    }
+
+    @media (max-width: 768px){
+        margin-top: -60px;
+    }
+}

@@ -3,6 +3,7 @@
 @use 'calc-form';
 @use 'background';
 @use 'footer';
+@use 'result';
 
 @font-face{
     font-family: Avenir;
@@ -33,6 +34,10 @@ html, body {
 .calc-form,
 .result {
     flex-grow: 1;
+}
+
+.helptext{
+    color: variables.$mainTextColor;
 }
 
 //Tirar o spinscroll
