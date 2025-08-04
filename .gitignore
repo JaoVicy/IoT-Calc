@@ -210,5 +210,9 @@ __marimo__/
 
 node_modules
 
+
 # Dev 
 env
+
+.idea
+
