@@ -6,6 +6,7 @@ from django.shortcuts import render
 from .form import DistanceForm
 from geopy.distance import geodesic
 
+
 def index(request):
     result = None
     if request.method == "POST":
@@ -22,6 +23,7 @@ def index(request):
     else:
         form = DistanceForm()
     return render(request, "app/index.html", {"form": form, "result": result})
+
 
 """"
 # Function to handle distance calculation (future use)
