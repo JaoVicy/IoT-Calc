@@ -11,7 +11,8 @@
         margin-top: -550px;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px){ // Não esquecer de dar "python manage.py collectstatic" após alterações!!
+        font-size: 18px;
         margin-top: -60px;
     }
 }
