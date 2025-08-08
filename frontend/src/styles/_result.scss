@@ -8,11 +8,11 @@
     justify-content: center;
 
     @media (min-width: 1024px){
-        margin-top: -550px;
+        margin-bottom: 30px;
     }
 
     @media (max-width: 768px){ // Não esquecer de dar "python manage.py collectstatic" após alterações!!
         font-size: 18px;
-        margin-top: -60px;
+        margin-bottom: 50px;
     }
 }
