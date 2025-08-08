@@ -30,7 +30,7 @@ def index(request):
     except Exception as e:
         return HttpResponse(f"An error occurred: {e}")
     
-        return render(request, "app/index.html", {"form": form, "result": result})
+    return render(request, "app/index.html", {"form": form, "result": result})
 
 
 """"
